@@ -4,6 +4,7 @@
 [![JSON](https://img.shields.io/badge/JSON-caccd1?style=for-the-badge&logo=JSON&logoColor=white&labelColor=101010)]()
 [![REGEX](https://img.shields.io/badge/REGEX-2c9f45?style=for-the-badge&label=RGX&logoColor=white&labelColor=101010)]()
 [![API](https://img.shields.io/badge/API_CLIENT-7d3f98?style=for-the-badge&label=API&logoColor=white&labelColor=101010)]()
+[![AJAX](https://img.shields.io/badge/AJAX-f7df1e?style=for-the-badge&label=&#8593;&#8595;&logoColor=white&labelColor=101010)]()
 
 ### Ejercicios de Front-end
  - JavaScript
