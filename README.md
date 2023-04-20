@@ -5,4 +5,8 @@
 ### Ejercicios de Front-end
  - JavaScript
  - JQuery
+ - Json
+ - RegEx
 
+### Herramientas
+- [VSCode](https://code.visualstudio.com/)
