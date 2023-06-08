@@ -13,7 +13,7 @@ $(document).ready(function () {
 });
 
 $.fn.lanzarAvisoCookies = function (mensaje) {
-  var elementoCookies = document.createElement("div");
+  const elementoCookies = document.createElement("div");
   elementoCookies.innerHTML = "<p>" + mensaje + " <span>Aceptar</span></p>";
   elementoCookies.classList.add("avisoCookies");
   document.body.appendChild(elementoCookies);
