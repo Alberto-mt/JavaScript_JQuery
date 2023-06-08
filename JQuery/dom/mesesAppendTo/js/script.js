@@ -11,4 +11,8 @@ $(document).ready(function(){
     $( "li" ).each(function( index ) {
         console.log("(Indice: " + index + ") Procesando valor (" + $( this ).text() + ")" );
     });
+    //Mostrar número total de meses
+    $( "a" ).each(function( index ) {
+        $("p").text("Número de enlaces del documento: " + (index+1));
+    });
 });
