@@ -13,8 +13,4 @@ $(document).ready(function(){
     $( ".list-group-item" ).each(function( index ) {
         console.log("(enlace1: midato" + (index+1) + " --- valor:  (" + $( this ).text() + ")" );
     });
-
-    $( ".list-group-item" ).each(function( index ) {
-        console.log("(enlace2: midato" + (index+1) + " --- valor:  (" + $( this ).text() + ")" );
-    });
 });
