@@ -95,7 +95,7 @@ label#lbl-theme span {
   position: absolute;
   width: 35px;
   height: 35px;
-  background: url(../../../img/theme-light.png) no-repeat;
+  background: url(../../../../img/theme-light.png) no-repeat;
   background-size: cover;
   margin: 5px;
   cursor: pointer;
@@ -122,7 +122,7 @@ label#lbl-theme span:hover {
 }
 
 input#ckb-theme:checked + label#lbl-theme span {
-  background: url(../../../img/theme-dark.png) no-repeat;
+  background: url(../../../../img/theme-dark.png) no-repeat;
   background-size: cover;
 }
 
