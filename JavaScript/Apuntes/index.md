@@ -4,7 +4,7 @@
 ### Categories
 [![JavaScript](https://img.shields.io/badge/Variables-447ac0?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery/blob/main/JavaScript/Apuntes/categories/Variables.md)
 
-[![JavaScript](https://img.shields.io/badge/Strings-c044b8?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)]()
+[![JavaScript](https://img.shields.io/badge/Strings-c044b8?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery/blob/main/JavaScript/Apuntes/categories/Strings.md)
 
 [![JavaScript](https://img.shields.io/badge/Numeros-c08a44?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)]()
 
