@@ -143,11 +143,11 @@ console.log(numero.toString());
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strings</title>
-  </head>
-  <body bgcolor="#F7DF1E">
     <script>
       
     </script>
+  </head>
+  <body bgcolor="#F7DF1E">
     <center>
       <svg
         fill="#000000"
