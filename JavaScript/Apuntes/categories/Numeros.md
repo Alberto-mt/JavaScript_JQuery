@@ -48,72 +48,7 @@ const num8 = new Number(20);
 console.log(num8);
 ```
 
-#### Ejemplo de operadores de números
-```js
-// Operaciones
-const num1 = 9;
-const num2 = 2;
-let resultado;
 
-// Sumar
-resultado = num1 + num2;
-console.log(resultado);
-
-// Restar
-resultado = num1 - num2;
-console.log(resultado);
-
-// Multiplicar
-resultado = num1 * num2;
-console.log(resultado);
-
-// Dividir
-resultado = num1 / num2;
-console.log(resultado);
-
-// Modulo
-resultado = num1 % num2;
-console.log(resultado);
-```
-
-#### Ejemplo de operadores de incremento y decremento
-```js
-// Incrementar numero
-let num = 10;
-num++;
-console.log(num);
-num = 10;
-++num;
-console.log(num);
-num = 10;
-num += 2;
-console.log(num);
-
-// Decrementar número
-num = 10;
-num--;
-console.log(num);
-num = 10;
---num;
-console.log(num);
-num = 10;
-num -= 2;
-console.log(num);
-```
-
-#### Ejemplo de orden de ejecución de las operaciones
-```js
-let resultado;
-// Orden de las operaciones
-resultado = 6 + 4 * 2;
-console.log(resultado);
-resultado = (6 + 4) * 2;
-console.log(resultado);
-
-// 25% de resultado
-resultado = (75 + 25) * 0.25;
-console.log(resultado);
-```
 
 #### Ejemplo de métodos Math de números
 ```js
@@ -218,7 +153,7 @@ console.log(num4.toString());
       <br /><br /><hr /><br /><br />
       <h1>Números</h1>
       <br />
-      <h2>Números - Operadores - Math - Number</h2>
+      <h2>Números - Math - Number</h2>
     </center>
   </body>
 </html>
