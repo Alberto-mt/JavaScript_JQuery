@@ -18,6 +18,10 @@
 | **Math.max(1,2,4,2,1,0,9)**  | Número de máximo valor de números  |
 | **Math.random()**  | Número aleatorio  |
 | **Math.floor( Math.random() * 10 )**  | Número aleatorio dentro de un rango  |
+| **Number.parseInt(num)**  | Convertir número String a número entero  |
+| **Number.parseFloat(num)**  | Convertir número String a número decimal  |
+| **Number.isInteger(num)**  | Saber si número es entero  |
+| **num.toString()**  | Convertir número en String  |
 
 #### Ejemplo de creación de números
 ```js
@@ -72,6 +76,45 @@ resultado = num1 % num2;
 console.log(resultado);
 ```
 
+#### Ejemplo de operadores de incremento y decremento
+```js
+// Incrementar numero
+let num = 10;
+num++;
+console.log(num);
+num = 10;
+++num;
+console.log(num);
+num = 10;
+num += 2;
+console.log(num);
+
+// Decrementar número
+num = 10;
+num--;
+console.log(num);
+num = 10;
+--num;
+console.log(num);
+num = 10;
+num -= 2;
+console.log(num);
+```
+
+#### Ejemplo de orden de ejecución de las operaciones
+```js
+let resultado;
+// Orden de las operaciones
+resultado = 6 + 4 * 2;
+console.log(resultado);
+resultado = (6 + 4) * 2;
+console.log(resultado);
+
+// 25% de resultado
+resultado = (75 + 25) * 0.25;
+console.log(resultado);
+```
+
 #### Ejemplo de métodos Math de números
 ```js
 // El objeto Math de JavaScript le permite realizar tareas matemáticas con números
@@ -121,6 +164,31 @@ console.log(resultado);
 resultado = Math.floor( Math.random() * 10 );
 console.log(resultado);
 ```
+#### Ejemplo de conversión de números (parsear)
+```js
+const num1 = "9";
+const num2 = "Nueve";
+const num3 = "9.5";
+const num4 = 9;
+console.log(num1);
+console.log(num2);
+console.log(num3);
+console.log(num4);
+
+// Convertir de String a Número
+console.log(Number.parseInt(num1));
+console.log(Number.parseInt(num3));
+
+// Convertir a número con decimales
+console.log(Number.parseFloat(num3));
+
+// Saber si un número es entero o no
+console.log(Number.isInteger(num4));
+console.log(Number.isInteger(num2));
+
+// Convertir número en String
+console.log(num4.toString());
+```
 
 #### Html base
 ```html
@@ -150,7 +218,7 @@ console.log(resultado);
       <br /><br /><hr /><br /><br />
       <h1>Números</h1>
       <br />
-      <h2>Números - Math</h2>
+      <h2>Números - Operadores - Math - Number</h2>
     </center>
   </body>
 </html>
