@@ -99,6 +99,7 @@ console.log(resultado);
 resultado = Math.floor( Math.random() * 10 );
 console.log(resultado);
 ```
+
 #### Ejemplo de conversión de números (parsear)
 ```js
 const num1 = "9";
