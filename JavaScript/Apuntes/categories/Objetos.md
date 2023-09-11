@@ -10,6 +10,11 @@
 | **delete \[objeto.propiedad\]**  | Eliminar propiedad de objeto  |
 | **Object.freeze(\[objeto\])**  | Congelar objeto para no ser modificado  |
 | **Object.isFrozen(\[objeto\])**  | Saber si un objeto esta congelado<br>true o false  |
+| **Object.assign(\[objeto1\], \[objeto2\])**  | Unión de objetos  |
+| **const resultado = { ...\[objeto1\], ...\[objeto2\]};**  | Unión de objetos con Spread Operator o Rest Operator |
+| **Object.keys(\[objeto\])**  | Devuelve un arreglo con los keys del objeto  |
+| **Object.values(\[objeto\])**  | Devuelve un arreglo con los valores del objeto  |
+| **Object.entries(\[objeto\])**  | Devuelve una matriz de llaves y valores  |
 
 #### Ejemplo de creación de objetos
 ```js
@@ -121,6 +126,61 @@ console.log(Object.isFrozen(persona));
 console.log(persona);
 ```
 
+#### Ejemplo de unión de objetos
+```js
+const persona = {
+  nombre: "Pepe Ruiz",
+  edad: 24,
+  hombre: true
+};
+
+const empleado = {
+  departamento: "Diseño",
+  categoria: "Junior"
+};
+
+// Unir 2 objetos con assign
+let resultado = Object.assign(persona, empleado);
+console.log(resultado);
+
+// Unir 2 objetos con Spread Operator o Rest Operator
+resultado = {...persona, ...empleado};
+console.log(resultado);
+```
+#### Ejemplo de this
+```js
+const persona = {
+  nombre: "Pepe Ruiz",
+  edad: 24,
+  hombre: true,
+  mostrarInfo: function () {
+    return `${this.nombre} tiene ${this.edad} años`;
+  }
+};
+console.log(persona.mostrarInfo());
+```
+
+#### Ejemplo de iteradores de objetos
+```js
+const persona = {
+  nombre: "Pepe Ruiz",
+  edad: 24,
+  hombre: true,
+  mostrarInfo: function () {
+    return `${this.nombre} tiene ${this.edad} años`;
+  },
+};
+
+// Devolver un arreglo con los keys del objeto
+console.log(Object.keys(persona));
+
+// Devolver un arreglo con los valores del objeto
+console.log(Object.values(persona));
+
+// Devolver una matriz de llaves y valores
+console.log(Object.entries(persona));
+```
+
 #### Html base
 ```html
 <!DOCTYPE html>
@@ -149,7 +209,7 @@ console.log(persona);
       <br /><br /><hr /><br /><br />
       <h1>Objetos</h1>
       <br />
-      <h2>Objetos - destructuring - meétodos objetos</h2>
+      <h2>Objetos - destructuring - métodos objetos - this - spread operator</h2>
     </center>
   </body>
 </html>
