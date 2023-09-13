@@ -8,6 +8,13 @@
 | Método  | Descripción  |
 |:-:|---|
 | **.length**  | Número de elementos de un array  |
+| **.push(\[array\])**  | Añadir elemento al array <br>Añadir elemento al final del array  |
+| **.unshift(\[array\])**  | Añadir elemento al inicio del array  |
+| **totalCarrito = [...\[array\], \[elemento\]];**  | Añadir elemento al array con Spread Operator<br>Añadir elemento al final del array  |
+| **totalCarrito = [\[elemento\], ...\[array\]];**  | Añadir elemento al inicio del array con Spread Operator |
+| **.shift()**  | Eliminar el primer elemento  |
+| **.pop()**  | Eliminar el ultimo elemento  |
+| **.splice(\[indice\], \[nº de elementos\])**  | Eliminar por índice un número de elementos  |
 
 #### Ejemplo de creación de arrays
 ```js
@@ -81,6 +88,134 @@ for (let i = 0; i < meses.length; i++) {
 }
 ```
 
+#### Ejemplo de métodos de array
+```js
+// Array de productos
+const carrito = [];
+
+// Añadir un elemento al carrito...
+const producto = {
+  nombre: "Camiseta sport",
+  precio: 9.95,
+};
+
+const producto2 = {
+  nombre: "Camisa lino",
+  precio: 29.95,
+};
+
+const producto3 = {
+  nombre: "Bañador",
+  precio: 14.95,
+};
+
+// Añadir al final del array
+carrito.push(producto);
+carrito.push(producto2);
+
+// Añadir al inicio del array
+carrito.unshift(producto3);
+
+// Eliminar el primer elemento
+// carrito.shift();
+
+// Eliminar el ultimo elemento
+// carrito.pop();
+
+// Eliminar por índice un número de elementos
+// carrito.splice(1, 1);
+
+console.log(carrito);
+```
+
+#### Ejemplo de métodos de array (añadir objetos/elementos con Spread Operator)
+```js
+// Array de productos
+const carrito = [];
+let totalCarrito = [];
+// Añadir un elemento al carrito...
+const producto = {
+  nombre: "Camiseta sport",
+  precio: 9.95,
+};
+
+const producto2 = {
+  nombre: "Camisa lino",
+  precio: 29.95,
+};
+
+const producto3 = {
+  nombre: "Bañador",
+  precio: 14.95,
+};
+
+// Añadir al final del array
+totalCarrito = [...carrito, producto];
+totalCarrito = [...totalCarrito, producto2];
+
+// Añadir al inicio del array
+totalCarrito = [producto3, ...totalCarrito];
+console.log(totalCarrito);
+
+// Eliminar el primer elemento
+carrito.shift();
+
+// Eliminar el ultimo elemento
+carrito.pop();
+```
+
+#### Ejemplo de Destructuring en arrays
+```js
+const letras = ["a", "b", "c", "d"];
+
+// Destructuring
+const [primero, , segundo, tercero] = letras;
+console.log(letras);
+console.log(primero);
+// Para saltarte un valor poner una coma
+console.log(segundo);
+console.log(tercero);
+
+// Volver al array original
+// const [primero, , segundo, ...tercero] = letras;
+// console.log(letras);
+```
+#### Ejemplo de iteradores en arrays
+```js
+const carrito = [
+  { nombre: "Camiseta sport", precio: 9.95 },
+  { nombre: "Camisa lino", precio: 29.95 },
+  { nombre: "Bañador ", precio: 14.95 },
+];
+console.log(carrito);
+
+// Bucle for
+for (let i = 0; i < carrito.length; i++) {
+  console.log(
+    `Producto: ${carrito[i].nombre} - Precio: ${carrito[i].precio} `
+  );
+}
+console.log("");
+
+// ForEach
+carrito.forEach(function (producto) {
+  console.log(
+    `Producto: ${producto.nombre} - Precio: ${producto.precio} `
+  );
+});
+console.log("");
+
+// Map (crea un array nuevo a partir de otro para trabajar sobre él)
+const carritoMap = carrito.map(function (producto) {
+  return `Producto: ${producto.nombre} - Precio: ${producto.precio + 1} `;
+});
+console.log(carritoMap);
+
+carritoMap.forEach((value, key) => {
+  console.log(value);
+});
+```
+
 #### Html base
 ```html
 <!DOCTYPE html>
@@ -109,7 +244,7 @@ for (let i = 0; i < meses.length; i++) {
       <br /><br /><hr /><br /><br />
       <h1>Arrays</h1>
       <br />
-      <h2>Arrays - métodos arrays</h2>
+      <h2>Arrays - métodos arrays - destructuring - iteradores</h2>
     </center>
   </body>
 </html>
