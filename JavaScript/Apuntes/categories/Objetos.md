@@ -208,8 +208,16 @@ console.log(Object.entries(persona));
       </svg>
       <br /><br /><hr /><br /><br />
       <h1>Objetos</h1>
-      <br />
-      <h2>Objetos - destructuring - métodos objetos - this - spread operator</h2>
+      <ul style="max-width: 400px; text-align: left;">
+        <li>Métodos de objetos</li>
+        <li>Ejemplo de creación de objetos</li>
+        <li>Ejemplo de "destructuring" de objetos</li>
+        <li>Ejemplo de objeto dentro de otro</li>
+        <li>Ejemplo de modificación de valores de objetos</li>
+        <li>Ejemplo de unión de objetos</li>
+        <li>Ejemplo de this</li>
+        <li>Ejemplo de iteradores de objetos</li>
+      </ul>
     </center>
   </body>
 </html>
