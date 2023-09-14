@@ -161,8 +161,11 @@ console.log(numero.toString());
       </svg>
       <br /><br /><hr /><br /><br />
       <h1>Strings</h1>
-      <br />
-      <h2>Strings - Cadenas de caracteres</h2>
+      <ul style="max-width: 400px; text-align: left;">
+        <li>Métodos de Strings</li>
+        <li>Ejemplo creación de cadenas</li>
+        <li>Ejemplo de métodos de Strings</li>
+      </ul>
     </center>
   </body>
 </html>
