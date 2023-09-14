@@ -22,11 +22,11 @@
 
 #### Ejemplo de creación de funciones
 ```js
-// Mediante function 
+// Mediante function
 function saludo() {
   console.log("Hola Mundo");
 }
-// Llamada a función 
+// Llamada a función
 saludo();
 
 // Mediante expresión de función (se asigna como si fuera una variable)
@@ -34,7 +34,40 @@ const despedida = function () {
   console.log("Hasta pronto");
 };
 // Llamada a función
-despedida(); 
+despedida();
+
+// Funciones con parametros
+function saludoPersonalizado(nombre, apellido) {
+  console.log("Hola " + nombre + " " + apellido);
+  console.log(`Hola ${nombre} ${apellido}`);
+}
+// LLamada a función con argumentos
+saludoPersonalizado("Pepe", "Ruiz");
+
+// Funciones de retorno
+function sumar(a, b) {
+  return a + b;
+}
+const resultado = sumar(2.75, 4.95);
+console.log(resultado);
+
+// Funciones de retorno 2
+let total = 0;
+function pedido(precio) {
+  return (total += precio);
+}
+
+function precioterraza(total) {
+  return 1.05 * total;
+}
+
+total = pedido(2.75);
+total = pedido(3.5);
+total = pedido(10.95);
+console.log(`Total:  ${total}`);
+
+const totalPagar = precioterraza(total);
+console.log(`Total con suplemento terraza:  ${totalPagar}`); 
 ```
 
 #### Ejemplo de Hoisting
@@ -116,6 +149,88 @@ for (let i = 0; i < 1000000; i++) {
   // Hacer algo
 }
 console.timeEnd("miTemporizador");
+```
+
+#### Ejemplo de comunicación entre funciones
+```js
+app();
+
+function app() {
+  console.log("Iniciando App");
+  conexionDB();
+}
+
+function conexionDB() {
+  console.log("success:   Conexión realizada");
+  actualización("success:   Actualización realizada");
+}
+
+function actualización(msg) {
+  console.log(msg);
+  console.log("Conexión finalizada");
+}
+```
+
+#### Ejemplo de comunicación entre funciones
+```js
+// Métodos de propiedad
+const reproductor = {
+  reproducir: function (id) {
+    console.log(`start: ${id}`);
+  },
+  pausar: function (id) {
+    console.log(`pause: ${id}`);
+  }
+};
+
+// Métodos fuera de la constante
+reproductor.parar = function(id) {
+  console.log(`stop: ${id}`);
+}
+
+reproductor.reproducir(9);
+reproductor.pausar(9);
+reproductor.parar(9);
+```
+
+#### Ejemplo de Arrow functions (funciones flecha)
+```js
+// Functions
+const reproducir = function () {
+  console.log("start");
+};
+
+// Arrow functions
+const pausar = () => {
+  console.log("pause");
+};
+
+// Una linea no requiere llaves
+const parar = () => console.log("stop");
+
+// Retornar un valor
+const siguiente = () => "next >>";
+
+// Llamada a funciones
+reproducir();
+pausar();
+parar();
+console.log(siguiente());
+
+// Parametros en Arrow Function...
+
+// Parametros
+const id = (num) => console.log(`track: ${num}`);
+id(1);
+
+// si es un solo parmetro no ponemos el parentesis
+const idUltimo = num => console.log(`track: ${num}`);
+idUltimo(10);
+
+// Multiples parametros si requieren parentesis
+const cancion = (id, nombre) =>
+  console.log(`${id}: ${nombre}`);
+  cancion(2, "Rallando el sol");
 ```
 
 #### Html base
