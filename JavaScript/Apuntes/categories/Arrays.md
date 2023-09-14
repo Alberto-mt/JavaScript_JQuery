@@ -243,8 +243,17 @@ carritoMap.forEach((value, key) => {
       </svg>
       <br /><br /><hr /><br /><br />
       <h1>Arrays</h1>
-      <br />
-      <h2>Arrays - métodos arrays - destructuring - iteradores</h2>
+      <ul style="max-width: 400px; text-align: left;">
+        <li>Métodos de arrays</li>
+        <li>Ejemplo de creación de arrays</li>
+        <li>Ejemplo de acceso a elementos de arrays</li>
+        <li>Ejemplo de recorrer arrays</li>
+        <li>Ejemplo de modificar valores de un array</li>
+        <li>Ejemplo de métodos de array</li>
+        <li>Ejemplo de métodos de array (añadir objetos/elementos con Spread Operator)</li>
+        <li>Ejemplo de Destructuring en arrays</li>
+        <li>Ejemplo de iteradores en arrays</li>
+      </ul>
     </center>
   </body>
 </html>
