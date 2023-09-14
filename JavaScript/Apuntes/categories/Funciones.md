@@ -171,26 +171,40 @@ function actualización(msg) {
 }
 ```
 
-#### Ejemplo de comunicación entre funciones
+#### Ejemplo de métodos de propiedad
 ```js
 // Métodos de propiedad
 const reproductor = {
+  cancion: "",
   reproducir: function (id) {
     console.log(`start: ${id}`);
   },
   pausar: function (id) {
     console.log(`pause: ${id}`);
+  },
+  // set: añadir valor
+  set nuevaCancion(cancion) {
+    this.cancion = cancion;
+    console.log(`add:  ${cancion}`);
+  },
+  // get: obtener valor
+  get obtenerCancion() {
+    console.log(`${this.cancion}`);
   }
 };
 
 // Métodos fuera de la constante
-reproductor.parar = function(id) {
+reproductor.parar = function (id) {
   console.log(`stop: ${id}`);
-}
+};
 
 reproductor.reproducir(9);
 reproductor.pausar(9);
 reproductor.parar(9);
+
+// set y get
+reproductor.nuevaCancion = "Rayando el sol";
+reproductor.obtenerCancion;
 ```
 
 #### Ejemplo de Arrow functions (funciones flecha)
@@ -233,6 +247,34 @@ const cancion = (id, nombre) =>
   cancion(2, "Rallando el sol");
 ```
 
+#### Ejemplo de ForEach y Map con arrow functions
+```js
+const carrito = [
+  { nombre: "Camiseta playera", precio: 5.95 },
+  { nombre: "Camisa lino", precio: 24.95 },
+  { nombre: "Bañador", precio: 14.95 },
+];
+
+// map
+// En los arrow functions si no se coloca el return y queda en una sola linea dan por implicito el return.. en el map
+const carritoMap = carrito.map(
+  (producto) => `Producto: ${producto.nombre} Precio: ${(producto.precio * 1.21).toFixed(2)} `
+);
+console.log(carrito);
+console.log(carritoMap);
+
+// forEach
+carrito.forEach((producto) =>
+  console.log(`Producto: ${producto.nombre} Precio: ${producto.precio}`)
+);
+
+console.log("");
+
+carritoMap.forEach((element) =>
+  console.log(element)
+);
+```
+
 #### Html base
 ```html
 <!DOCTYPE html>
@@ -260,8 +302,19 @@ const cancion = (id, nombre) =>
       </svg>
       <br /><br /><hr /><br /><br />
       <h1>Funciones</h1>
-      <br />
-      <h2>Funciones</h2>
+      <ul style="max-width: 400px; text-align: left;">
+        <li>Funciones del core</li>
+        <li>Métodos de consola</li>
+        <li>Ejemplo de creación de funciones</li>
+        <li>Ejemplo de Hoisting</li>
+        <li>Ejemplo de diferencia entre función y método</li>
+        <li>Ejemplo de funciones del core</li>
+        <li>Ejemplo de métodos de consola</li>
+        <li>Ejemplo de comunicación entre funciones</li>
+        <li>Ejemplo de métodos de propiedad</li>
+        <li>Ejemplo de Arrow functions (funciones flecha)</li>
+        <li>Ejemplo de ForEach y Map con arrow functions</li>
+      </ul>
     </center>
   </body>
 </html>
