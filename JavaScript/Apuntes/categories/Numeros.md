@@ -154,8 +154,12 @@ console.log(num4.toString());
       </svg>
       <br /><br /><hr /><br /><br />
       <h1>Números</h1>
-      <br />
-      <h2>Números - Math - Number</h2>
+      <ul style="max-width: 400px; text-align: left;">
+        <li>Métodos de números</li>
+        <li>Ejemplo de creación de números</li>
+        <li>Ejemplo de métodos Math de números</li>
+        <li>Ejemplo de conversión de números (parsear)</li>
+      </ul>
     </center>
   </body>
 </html>
