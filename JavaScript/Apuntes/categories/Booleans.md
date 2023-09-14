@@ -73,8 +73,10 @@ console.log(
       </svg>
       <br /><br /><hr /><br /><br />
       <h1>Booleans</h1>
-      <br />
-      <h2>Booleans - typeof - comparar booleans </h2>
+      <ul style="max-width: 400px; text-align: left;">
+        <li>Ejemplo de tipos de dato boolean</li>
+        <li>Ejemplo de comparación entre booleans</li>
+      </ul>
     </center>
   </body>
 </html>
