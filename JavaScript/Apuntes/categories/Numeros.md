@@ -22,6 +22,7 @@
 | **Number.parseFloat(num)**  | Convertir número String a número decimal  |
 | **Number.isInteger(num)**  | Saber si número es entero  |
 | **num.toString()**  | Convertir número en String  |
+| **numDecimal.toFixed(2)**  | Redondear número decimal a 2 decimales  |
 
 #### Ejemplo de creación de números
 ```js
