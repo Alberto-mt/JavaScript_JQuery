@@ -71,7 +71,7 @@ console.log(resultado);
 resultado = (75 + 25) * 0.25;
 console.log(resultado);
 ```
-#### Ejemplo de operadores de incremento y decremento
+#### Ejemplo de operadores de comparación
 ```js
 const num1 = 9;
 const num2 = "9";
@@ -128,8 +128,12 @@ console.log(num1 !== num2);
       </svg>
       <br /><br /><hr /><br /><br />
       <h1>Operadores</h1>
-      <br />
-      <h2>Números - Operadores</h2>
+      <ul style="max-width: 400px; text-align: left;">
+        <li>Ejemplo de operadores de números</li>
+        <li>Ejemplo de operadores de incremento y decremento</li>
+        <li>Ejemplo de orden de ejecución de las operaciones</li>
+        <li>Ejemplo de operadores de comparación</li>
+      </ul>
     </center>
   </body>
 </html>
