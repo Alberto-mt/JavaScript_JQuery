@@ -136,8 +136,12 @@ console.log(edad);
       </svg>
       <br /><br /><hr /><br /><br />
       <h1>Variables</h1>
-      <br />
-      <h2>var - let - const</h2>
+      <ul style="max-width: 400px; text-align: left;">
+        <li>Descripción de variables</li>
+        <li>Ejemplo uso de variables var</li>
+        <li>Ejemplo uso de variables let</li>
+        <li>Ejemplo uso de variables const</li>
+      </ul>
     </center>
   </body>
 </html>
