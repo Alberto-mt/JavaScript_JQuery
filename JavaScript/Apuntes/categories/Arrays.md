@@ -8,8 +8,8 @@
 | Método  | Descripción  |
 |:-:|---|
 | **.length**  | Número de elementos de un array  |
-| **.push(\[array\])**  | Añadir elemento al array <br>Añadir elemento al final del array  |
-| **.unshift(\[array\])**  | Añadir elemento al inicio del array  |
+| **.push(\[elemento\])**  | Añadir elemento al array <br>Añadir elemento al final del array  |
+| **.unshift(\[elemento\])**  | Añadir elemento al inicio del array  |
 | **totalCarrito = [...\[array\], \[elemento\]];**  | Añadir elemento al array con Spread Operator<br>Añadir elemento al final del array  |
 | **totalCarrito = [\[elemento\], ...\[array\]];**  | Añadir elemento al inicio del array con Spread Operator |
 | **.shift()**  | Eliminar el primer elemento  |
