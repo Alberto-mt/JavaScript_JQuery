@@ -40,10 +40,56 @@ const bgLinks = document.getElementsByClassName("nav-a");
 const bgLogo = document.getElementById('logo');
 
 // Selectores por consulta
-const passOk = document.querySelector('.alert-success #pass');
+const card2 = document.querySelector('.card:nth-child(2)');
 
 // Selectores por consulta para todos los elementos de un tipo
 const cards = document.querySelectorAll('.card');
+```
+
+#### Ejemplo de acceder a texto
+```js
+const tituloPrincipal = document.querySelector("h1");
+console.log(tituloPrincipal);
+
+// 3 formas de acceder al texto
+console.log(tituloPrincipal.innerText);
+console.log(tituloPrincipal.textContent);
+console.log(tituloPrincipal.innerHTML);
+
+// Formas de modifcar el texto 
+// console.log(tituloPrincipal.innerText = "innerText");
+// console.log(tituloPrincipal.textContent = "textContent");
+// console.log(tituloPrincipal.innerHTML = "innerHTML");
+
+// Añadir texto 
+console.log(tituloPrincipal.innerText += "innerText ");
+console.log(tituloPrincipal.textContent += " - textContent - ");
+console.log(tituloPrincipal.innerHTML += " innerHTML");
+```
+
+#### Ejemplo de estilos css en el DOM
+```js
+const tituloPrincipal = document.querySelector("h1");
+console.log(tituloPrincipal);
+
+// Listado de objeto con propiedades CSS
+console.log("Listado de objeto con propiedades CSS");
+console.log(tituloPrincipal.style);
+console.log("");
+
+// Cambiar estilos
+tituloPrincipal.style.textTransform = 'uppercase';
+tituloPrincipal.style.fontFamily = 'Arial';
+
+// Listar las classes
+console.log("Listar las classes");
+console.log(tituloPrincipal.classList);
+
+// Añadir clase 
+tituloPrincipal.classList.add("nuevaClase");
+
+// Eliminar clase 
+tituloPrincipal.classList.remove("nuevaClase");
 ```
 
 #### Html base
@@ -55,9 +101,6 @@ const cards = document.querySelectorAll('.card');
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-    <script>
-      
-    </script>
   </head>
   <body bgcolor="#F7DF1E">
     <center>
@@ -80,6 +123,9 @@ const cards = document.querySelectorAll('.card');
         <li>Ejemplo selectores de acceso del DOM</li>
       </ul>
     </center>
+    <script>
+      
+    </script>
   </body>
 </html>
 ```
