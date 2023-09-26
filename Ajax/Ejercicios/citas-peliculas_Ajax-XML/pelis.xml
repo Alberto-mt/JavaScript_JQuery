@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personaje name="El Padrino" actor="Marlon Brando">
+	<momento tiempo="1:08:07">
+		Mantén cerca a tus amigos, pero más cerca a tus enemigos.
+	</momento>
+	<momento tiempo="3:05:09">
+		¿Qué te pasa?, ¿se te ablandó el cerebro? Nunca dejes que nadie de fuera de la familia sepa lo que estás pensando.
+	</momento>
+	<momento tiempo="2:11:37">
+		Toda mi vida he estado luchando por no ser una marioneta movida por los hilos de los poderosos.
+	</momento>
+</personaje>
