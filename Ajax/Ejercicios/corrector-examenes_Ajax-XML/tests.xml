@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<examenes>
+	<alumno nombre="Juan Padrillo Diaz" asignatura="DWEC">
+		<respuestas>
+			-BBaBAA-BBbBBABBBBA-BaBBBBBbbBBABBBBBBABB-BBBaBBABBBBBBB-BABBBBBBBBBBB
+		</respuestas>
+	</alumno>
+	<alumno nombre="Laura Sanz Herranz" asignatura="EIE">
+		<respuestas>
+			BABA-AABABBBAABAABA-ABABAAAB-ABAAAAAA-AAAABAAABAAABAAAAAB-ABBAAAAAAAAA
+		</respuestas>
+	</alumno>
+	<alumno nombre="Roberto Jimenez Gordillo" asignatura="DWES">
+		<respuestas>
+			bbbaaabbbbaaba-BAAAABBABBAAABBAABAAB-AAAAABBBABAABABA-ABBBABBABAA-AAAA
+		</respuestas>
+	</alumno>
+	<alumno nombre="Lola Pérez Santos" asignatura="DIW">
+		<respuestas>
+			BA-ABABBB-bbbaababaaaabbaaabbaaabbabABBAAABABBAAABABAAAABBABAAABBABAAB
+		</respuestas>
+	</alumno>
+</examenes>
