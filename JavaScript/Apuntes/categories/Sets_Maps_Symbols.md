@@ -240,6 +240,179 @@ console.log(profesor[nombreProfesor]);
 console.log(nombreProfesor);
 ```
 
+#### Ejemplo de Iterators
+```js
+// Iterators
+function crearIterador(carrito) {
+  let i = 0;
+
+  return {
+    siguiente: () => {
+      let fin = i >= carrito.length;
+      let valor = !fin ? carrito[i++] : undefined;
+
+      return {
+        fin: fin,
+        valor: valor,
+      };
+    },
+  };
+}
+const Carrito = ["Producto 1", "Producto 2", "Producto 3", "Producto 4"];
+
+const RecorrerCarrito = crearIterador(carrito);
+
+console.log(recorrerCarrito.siguiente());
+console.log(recorrerCarrito.siguiente());
+console.log(recorrerCarrito.siguiente());
+console.log(recorrerCarrito.siguiente());
+console.log(recorrerCarrito.siguiente());
+```
+
+#### Ejemplo de Gerenador y yield
+```js
+// Generador
+// Es una funcion que retorna un Iterador.
+// Se indican con un asterisco después de  la palabra function
+
+function* crearGenerador() {
+  // Yiel: son los valores que podemos utilziar para iterar
+  yield 1;
+  yield "Nombre";
+  yield 3 + 3;
+  yield true;
+}
+// Se llaman como funciones normales pero retornan un iterador
+const iterador = crearGenerador();
+
+console.log(iterador.next().value);
+console.log(iterador.next().value);
+console.log(iterador.next().value);
+console.log(iterador.next().value);
+console.log(iterador.next().value);
+console.log("");
+
+// Crear el generador
+function* nuevoGenerador(carrito) {
+  for (let i = 0; i < carrito.length; i++) {
+    yield carrito[i];
+  }
+}
+// Carrito
+const carrito = ["Producto 1", "Producto 2", "Producto 3", "Producto 4"];
+
+// Recorrer el iterador
+let iterador2 = nuevoGenerador(carrito);
+
+console.log(iterador2.next());
+console.log(iterador2.next());
+console.log(iterador2.next());
+console.log(iterador2.next());
+console.log(iterador2.next());
+```
+
+#### Ejemplo de Entries Iterator
+```js
+// Entries Iterator
+const ciudades = ["Barcelona", "Madrid", "Sevilla", "Valencia"];
+const productos = new Set(["producto 1", "producto 2", "producto 3", "producto 4"]);
+const alumnos = new Map();
+
+alumnos.set("202301", "Pepe");
+alumnos.set("202302", "Luis");
+
+// Entries 
+console.log("Entries");
+// Entries a las ciudades
+for (let entry of ciudades.entries()) {
+  console.log(entry);
+}
+
+// Entries a las productos
+for (let entry of productos.entries()) {
+  console.log(entry);
+}
+
+// Entries a los alumnos
+for (let entry of alumnos.entries()) {
+  console.log(entry);
+}
+console.log("");
+
+// Values iterator
+console.log("Values iterator");
+// Values a las ciudades
+for (let value of ciudades.values()) {
+  console.log(value);
+}
+
+// Values a las productos
+for (let value of productos.values()) {
+  console.log(value);
+}
+
+// Values a los alumnos
+for (let value of alumnos.values()) {
+  console.log(value);
+}
+console.log("");
+
+// Keys iterator
+console.log("Keys iterator");
+// keys a las ciudades
+for (let keys of ciudades.keys()) {
+  console.log(keys);
+}
+
+// Keys a las productos
+for (let keys of productos.keys()) {
+  console.log(keys);
+}
+
+// Keys a los alumnos
+for (let keys of alumnos.keys()) {
+  console.log(keys);
+}
+console.log("");
+
+// Default
+console.log("Default");
+for (let ciudad of ciudades) {
+  console.log(ciudad);
+}
+
+for (let producto of productos) {
+  console.log(producto);
+}
+
+for (let alumno of alumnos) {
+  console.log(alumno);
+}
+console.log("");
+
+// Iterar en un string
+console.log("Iterar en un string");
+const mensaje = "Hola Mundo";
+
+// Forma vieja
+for (let i = 0; i < mensaje.length; i++) {
+  console.log(mensaje[i]);
+}
+
+// Forma nueva
+for (let letra of mensaje) {
+  console.log(letra);
+}
+
+console.log("");
+// Iterar en un node list
+const elementos = document.getElementsByTagName("li");
+
+for (let elemento of elementos) {
+  console.log(elemento.innerText);
+}
+```
+
 #### Html base
 ```html
 <!DOCTYPE html>
@@ -273,6 +446,9 @@ console.log(nombreProfesor);
         <li>Ejemplo de Maps</li>
         <li>Ejemplo de WeakMaps</li>
         <li>Ejemplo de Symbols</li>
+        <li>Ejemplo de Iterators</li>
+        <li>Ejemplo de Gerenador y yield</li>
+        <li>Ejemplo de Entries Iterator</li>
       </ul>
     </center>
     <script>
@@ -280,7 +456,6 @@ console.log(nombreProfesor);
     </script>
   </body>
 </html>
-
 ```
 
 [![JavaScript](https://img.shields.io/badge/Sets_Maps_Symbols-c044b8?style=for-the-badge&label=&#9650;&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery/blob/main/JavaScript/Apuntes/categories/Sets_Maps_Symbols.md)
