@@ -38,6 +38,165 @@ window.nombreAlumno = "Pepe";
 console.log(window.nombreAlumno);
 ```
 
+#### Módulos de JavaScript
+Los módulos en JavaScript son una característica que permite organizar y reutilizar el código de manera más efectiva. Los módulos permiten dividir el código en piezas más pequeñas y manejables, lo que facilita la organización y el mantenimiento del código.
+
+Un módulo en JavaScript es un archivo que contiene código relacionado que puede ser exportado e importado por otros archivos. Los módulos pueden contener variables, funciones, clases u otros elementos que pueden ser utilizados en otros archivos.
+
+- **Archivo square.js**
+```js
+export class Square {
+  constructor(length) {
+    this.length = length;
+  }
+
+  calculateArea() {
+    return this.length * this.length;
+  }
+}
+```
+
+- **Archivo main.js**
+```js
+import { Square } from './square.js';
+
+const square = new Square(5);
+console.log(square.calculateArea()); // Output: 25
+```
+Se exporta la clase Square desde el archivo square.js utilizando la palabra clave export. Luego, en el archivo main.js, se importa la clase Square utilizando la palabra clave import y se utiliza para crear un objeto square y calcular el área del cuadrado.
+
+#### Ejemplo de módulos 
+- **Archivo app.js**
+```js
+"use strict";
+// 1) El Problema
+// console.log(nombreCliente);
+
+// 2) Esto nos puede llevar a variables que se mezclen con otras en especial si el código es mantenido por múltiples personas o también si decidimos implementar librerías...
+
+// La solución es agrupar cada archivo en lo que se conoce como un IIFE (irse al otro archivo)
+// console.log(window.nombreCliente);
+
+// Para leer ese export utilizamos
+import { nombreCliente } from "./cliente.js";
+
+console.log(nombreCliente); // También nos va a marcar un error por lo tanto agregamos type="module"
+
+// Comentar el código anterior
+import { nombreCliente, ahorro } from "./cliente.js";
+
+// Y puedes exportar o importar todo, variables, funciones, classes
+
+// 3  ) Exportar e importar funciones
+import { nombreCliente, ahorro, mostrarInformacion } from "./cliente.js";
+
+let cliente = mostrarInformacion(nombreCliente, ahorro);
+console.log(cliente);
+
+// 4)
+import { nombreCliente, ahorro, Cliente } from "./cliente.js";
+
+let cliente = new Cliente(nombreCliente, ahorro);
+console.log(cliente.mostrarInformacion());
+
+// 5)
+import { Cliente } from "./cliente.js";
+import { Empresa } from "./empresa.js";
+
+const nombreCliente = "Juan",
+  ahorroCliente = 400;
+
+let cliente = new Cliente(nombreCliente, ahorroCliente);
+console.log(cliente.mostrarInformacion());
+
+const nombreEmpresa = "Udemy",
+  ahorroEmpresa = 1000000000,
+  categoriaEmpresa = "aprendizaje";
+
+let empresa = new Empresa(nombreEmpresa, ahorroEmpresa, categoriaEmpresa);
+console.log(empresa.mostrarInformacion());
+
+// 6
+import funcion from "./cliente.js";
+funcion();
+```
+
+- **Archivo cliente.js**
+```js
+"use strict";
+
+// 1) El Problema...
+// const nombreCliente =  'Juan';
+// let ahorro = 200;
+
+// 2) Los IIFE son funciones que se ejecutan inmediatamente que son leidas...
+// Esta forma evitará que estas variables definidas en este archivo se puedan mezclar con las de otros archivos... y su sintaxis es la siguiente
+
+(function() {
+    const nombreCliente =  'Juan';
+    let ahorro = 200;
+
+    // El problema es que implementar un IIFE, si evita que nuestro código se mezcle con otro, pero el problema que tendriamos es que si queremos tener un código más ordenado y separar en distintos archivos sería imposible hacerlo
+    // window.nombreCliente =  'Juan';
+    // Lo cual es una solución, he visto proyectos grandes que están registrados de esa forma para mantener acceso a las funciones y métodos  
+})();
+
+// Para ello son muy útiles los modulos y 2 palabras, export e import...
+// Veamos un ejemplo de export
+export const nombreCliente =  'Juan'; // Esto nos va amarcar un error, nos dirá que los exports solo funcionan en modules...
+// Hay que abrir el index.js y declararlo con type="module"
+
+// Importar y exportar multiples valores
+// Exportar e importar funciones
+// También puedes exportar e importar funciones
+export const nombreCliente =  'Juan';
+export const ahorro = 200
+
+// 3 ) 
+export function mostrarInformacion(nombre, ahorro) {
+    return `Cliente: ${nombre} - Ahorro: ${ahorro}`;
+}
+
+// 4)
+// Exportar una clase
+export class Cliente {
+    constructor(nombre, ahorro) {
+        this.nombre = nombre;
+        this.ahorro = ahorro;
+    }
+
+    mostrarInformacion() {
+        return `Cliente: ${this.nombre} - Ahorro: ${this.ahorro}`;
+    }
+}
+
+// 6)  EXPORT DEFAULT
+// Cada archivo puede tener múltiples exports, pero solo un export default, este export default puede tener un nombre o no...
+export default function funcion() {
+    console.log('Función por default')
+}
+
+export default function () {
+    console.log('Función por default')
+}
+```
+
+- **Archivo empresa.js**
+```js
+// 5) Heredar una lase exportada...
+import { Cliente }  from './cliente.js';
+
+export class Empresa extends Cliente{
+    constructor(nombre, ahorro, categoria) {
+        super(nombre, ahorro);
+        this.categoria = categoria;
+    }
+    mostrarInformacion() {
+        return `Cliente: ${this.nombre} - Ahorro: ${this.ahorro} - Categoria ${this.categoria}`;
+    }
+}
+```
+
 #### Html base
 ```html
 <!DOCTYPE html>
@@ -67,6 +226,8 @@ console.log(window.nombreAlumno);
       <ul style="max-width: 400px; text-align: left">
         <li>IIFE: Expresiones de función ejecutadas inmediatamente</li>
         <li>Ejemplo de IIFE</li>
+        <li>Módulos de JavaScript</li>
+        <li>Ejemplo de módulos </li>
       </ul>
     </center>
     <script>
