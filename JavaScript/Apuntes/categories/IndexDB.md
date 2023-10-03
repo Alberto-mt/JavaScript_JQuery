@@ -2,7 +2,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery/blob/main/JavaScript/Apuntes/index.md)
 
 ### IndexDB
-[![JavaScript](https://img.shields.io/badge/IndexDB-44c04c?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery/tree/main/JavaScript/Apuntes/categories)
+[![JavaScript](https://img.shields.io/badge/IndexDB-44c04c?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery/blob/main/JavaScript/Apuntes/categories/IndexDB.md)
 
 #### Que es IndexDB?
 API de JavaScript que proporciona un sistema de base de datos transaccional en el navegador . Permite almacenar grandes cantidades de datos estructurados de manera eficiente y realizar búsquedas rápidas sobre ellos . Es ideal para aplicaciones web que necesitan almacenar y manipular datos en el cliente de forma asincrónica, sin depender de una conexión a Internet constante.
@@ -127,4 +127,4 @@ function crearAlumno() {
 </html>
 ```
 
-[![JavaScript](https://img.shields.io/badge/IndexDB-44c04c?style=for-the-badge&label=&#9650;&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery/tree/main/JavaScript/Apuntes/categories)
+[![JavaScript](https://img.shields.io/badge/IndexDB-44c04c?style=for-the-badge&label=&#9650;&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery/blob/main/JavaScript/Apuntes/categories/IndexDB.md)
