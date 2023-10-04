@@ -19,7 +19,7 @@ Realizar transacciones para leer o escribir datos en la base de datos. Utilizar 
 Es importante mencionar que IndexedDB es una API de bajo nivel y requiere un poco de aprendizaje adicional en comparación con otras opciones de almacenamiento en el navegador, como LocalStorage o SessionStorage. Sin embargo, ofrece mayor flexibilidad y capacidad para manejar grandes cantidades de datos de manera eficiente .
 
 #### Ejemplo de IndexDB
-```
+```js
 let DB;
 
 document.addEventListener('DOMContentLoaded', () => {
