@@ -114,6 +114,130 @@ function updateNetState(e) {
 }
 ```
 
+#### API - Fullscreen
+Permite presentar un elemento específico, como un video o un juego, en modo de pantalla completa, eliminando todos los elementos de la interfaz de usuario del navegador y otras aplicaciones de la pantalla hasta que se sale del modo de pantalla completa. Proporciona métodos y propiedades para manejar elementos HTML en pantalla completa.
+```js
+// Fullscreen
+// Ejecutar el sitio web en pantalla completa
+const abrirBtn = document.querySelector("#abrir-pantalla-completa");
+const salirBtn = document.querySelector("#salir-pantalla-completa");
+
+abrirBtn.addEventListener("click", pantallaCompleta);
+salirBtn.addEventListener("click", cerrarPantallaCompleta);
+
+function pantallaCompleta() {
+document.documentElement.requestFullscreen();
+}
+
+function cerrarPantallaCompleta() {
+document.exitFullscreen();
+}
+```
+
+#### API - Propiedad document.visibilityState
+Es parte de la API de JavaScript y se utiliza para determinar el estado de visibilidad de la página web actual. Puede tener uno de los siguientes valores:
+- visible: La página está visible y el usuario la está viendo activamente.
+- hidden: La página está oculta y el usuario no la está viendo o está en una pestaña diferente.
+- prerender: La página está en un estado de prerenderización y no está visible para el usuario.
+- unloaded: La página se ha descargado completamente y no está disponible para el usuario.
+Se puede pausar un audio/video cuando la página se vuelve oculta o realizar actualizaciones en segundo plano cuando la página se vuelve visible.
+```js
+// Detectar si nuestra página se esta ejecutando en primer o segundo plano
+document.addEventListener("visibilitychange", (e) => {
+    console.log(document.visibilityState);
+    
+    if (document.visibilityState === "visible") {
+      console.log("La página está visible");
+    } else {
+      console.log("La página está oculta");
+    }
+});
+```
+
+#### API - SpeechRecognition
+La API de SpeechRecognition en JavaScript permite la incorporación de reconocimiento de voz en aplicaciones web.
+- **Ejemplo con console.log()**
+```js
+// Verificar si el navegador soporta la API de SpeechRecognition
+if ('webkitSpeechRecognition' in window) {
+  // Crear una instancia de SpeechRecognition
+  var recognition = new webkitSpeechRecognition();
+
+  // Configurar opciones
+  recognition.continuous = true;
+  recognition.interimResults = true;
+
+  // Evento de inicio de reconocimiento
+  recognition.onstart = function() {
+    console.log('El reconocimiento de voz ha comenzado.');
+  };
+
+  // Evento de resultado de reconocimiento
+  recognition.onresult = function(event) {
+    var transcript = '';
+
+    // Obtener los resultados de reconocimiento
+    for (var i = event.resultIndex; i < event.results.length; i++) {
+      if (event.results[i].isFinal) {
+        transcript += event.results[i][0].transcript;
+      }
+    }
+
+    // Mostrar el resultado de reconocimiento
+    console.log('Resultado: ' + transcript);
+  };
+
+  // Iniciar el reconocimiento de voz
+  recognition.start();
+} else {
+  console.log('El navegador no soporta la API de SpeechRecognition.');
+}
+```
+
+- **Ejemplo en DOM**
+```js
+const salida = document.querySelector("#salida");
+const microfono = document.querySelector("#microfono");
+
+microfono.addEventListener("click", ejecutarSpeechAPI);
+
+function ejecutarSpeechAPI() {
+const SpeechRecognition = webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+// Iniciar el reconocimiento de voz
+recognition.start();
+
+// Inicio de reconocimiento
+recognition.onstart = function () {
+  salida.classList.add("mostrar");
+  salida.innerHTML = "Escuchando...";
+};
+
+recognition.onspeechend = function () {
+  salida.innerHTML = "Se detuvo de ejecutar";
+  recognition.stop();
+};
+
+// Resultado del reconocimiento
+recognition.onresult = function (e) {
+  console.log(e.results);
+
+  var transcript = e.results[0][0].transcript;
+  var confidence = e.results[0][0].confidence;
+
+  const speech = document.createElement("p");
+  speech.innerHTML = `Grabado: ${transcript}`;
+
+  const seguridad = document.createElement("p");
+  seguridad.innerHTML = `Seguridad:  ${parseInt(confidence * 100)} %`;
+
+  salida.appendChild(speech);
+  salida.appendChild(seguridad);
+};
+}
+```
+
 #### Html base
 ```html
 <!DOCTYPE html>
@@ -145,6 +269,9 @@ function updateNetState(e) {
         <li>API - Método getBoundingClientRect()</li>
         <li>API - Intersection Observer</li>
         <li>API - Propiedad navigator.onLine</li>
+        <li>API - Fullscreen</li>
+        <li>API - Propiedad document.visibilityState</li>
+        <li>API - SpeechRecognition</li>
       </ul>
       <button type="button" id="notificar">Notificarme!!</button>
 
