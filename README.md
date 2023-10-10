@@ -6,7 +6,7 @@
 [![API](https://img.shields.io/badge/API_CLIENT-7d3f98?style=for-the-badge&label=API&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery)
 [![AJAX](https://img.shields.io/badge/AJAX-005A9C?style=for-the-badge&logo=W3C&logoColor=white&labelColor=101010)](https://github.com/Alberto-mt/JavaScript_JQuery)
 
-### Apuntes y ejercicios
+### Apuntes, ejercicios y proyectos
  - JavaScript
  - JQuery
  - Json
