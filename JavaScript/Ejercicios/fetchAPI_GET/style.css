@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+  }
+  
+  main{
+    min-height: 70vh;
+  }
+  
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 5px 10px;
+  }
+  
+  .peticion {
+    width: 80%;
+    max-width: 1000px;
+    min-height: 400px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0.3px 0.5px 0.7px rgb(61, 61, 61);
+    box-shadow: 1.5px 2.9px 3.7px rgb(61, 61, 61);
+    box-shadow: 2.7px 5.4px 6.8px rgb(61, 61, 61);
+    box-shadow: 4.5px 8.9px 11.2px rgb(61, 61, 61);
+    box-shadow: 7.1px 14.3px 18px rgb(61, 61, 61);
+    box-shadow: 11.2px 22.3px 28.1px rgb(61, 61, 61);
+    box-shadow: 17px 33.9px 42.7px rgb(61, 61, 61);
+    box-shadow: 25px 50px 62.9px rgb(61, 61, 61);
+    padding: 30px;
+  }
