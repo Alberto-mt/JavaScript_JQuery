@@ -1,0 +1,255 @@
+* {
+  list-style: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+
+:root {
+  --color-black: #252525;
+  --color-blue: #447ac0;
+  --color-magenta: #c044b8;
+  --color-orange: #c08a44;
+  --color-green: #44c04c;
+  --color-grey: #bfbfbf;
+  --color-lgrey: #d9d9d9;
+  --color-red: #e20c0c;
+}
+
+body {
+  background-color: #f5f3f3;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/***** ***** ***** header ***** ***** *****/
+
+header {
+  padding: 20px 0 0 0;
+  background: white;
+  text-align: center;
+}
+
+header .borrar-curso {
+  background-color: var(--color-red);
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+header .submenu {
+  position: relative;
+}
+
+header .submenu #img-carrito {
+  margin-top: 15px;
+}
+
+header .submenu #carrito {
+  display: none;
+}
+
+header .submenu:hover #carrito {
+  display: block;
+  position: absolute;
+  right: 0;
+
+  top: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
+}
+
+header .vacio {
+  padding: 10px;
+  background-color: var(--color-red);
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+/***** ***** ***** main ***** ***** *****/
+
+main #cabecera {
+  background-color: var(--color-black);
+  height: 350px;
+}
+
+main #encabezado {
+  margin: 30px 0;
+}
+
+main .contenido-cabecera {
+  margin-top: 80px;
+  color: white;
+}
+
+main .contenido-cabecera form {
+  position: relative;
+  margin-bottom: 0;
+}
+
+main .contenido-cabecera form #buscador {
+  height: 50px;
+  margin-bottom: 0;
+}
+
+main .contenido-cabecera form .submit-buscador {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding-right: 5px;
+  display: block;
+  text-indent: -9999px;
+  width: 50px;
+  background-image: url(../img/lupa.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+main .barra {
+  padding: 20px 0;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(36, 144, 252, 0.98) 0.1%,
+    rgba(0, 7, 128, 1) 99.8%
+  );
+}
+
+main .barra p {
+  margin: 0;
+  color: white;
+}
+
+main .icono {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 60px;
+  background-size: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+main .icono1 {
+  background-image: url(../img/icono1.svg);
+}
+
+main .icono2 {
+  background-image: url(../img/icono2.svg);
+}
+
+main .icono3 {
+  background-image: url(../img/icono3.svg);
+}
+
+main #lista-cursos .row {
+  margin-bottom: 20px;
+}
+
+main article{
+    margin: 20px 0px;
+}
+
+main .agregar-carrito {
+  margin: 10px 0;
+}
+
+main .card {
+  text-align: center;
+  border: 1px solid var(--color-lgrey);
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+
+main .card:hover {
+    border: 1px solid var(--color-blue);
+    background-color: rgb(234, 234, 234);
+  }
+
+main .info-card {
+    text-align: left;
+  padding: 10px 20px;
+}
+
+main .info-card p,
+main .card h4 {
+  margin-bottom: 5px;
+}
+
+main .info-card .precio {
+  text-decoration: line-through;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+main .info-card .precio span {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/***** ***** ***** footer ***** ***** *****/
+
+footer {
+  margin-top: 40px;
+  border-top: 2px solid var(--color-lgrey);
+  background-color: var(--color-black);
+  padding: 40px 0px;
+  color: whitesmoke;
+}
+
+footer .menu a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: all 0.5s ease-in-out;
+}
+
+footer .menu a:hover {
+  color: var(--color-orange);
+  text-decoration: underline;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    text-align: left;
+  }
+
+  main .icono {
+    margin-bottom: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
